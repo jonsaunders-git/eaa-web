@@ -9,53 +9,69 @@
 </head>
 <body>
     <div class="container">
-        <h1>Challenges in EAA Compliance</h1>
-        <div class="nav">
-            <a href="index.html">Home</a>
-            <a href="standards.html">Standards</a>
-            <a href="brexit.html">Brexit & UK</a>
-            <a href="timeline.html">Timeline</a>
-            <a href="compliance.html">Compliance</a>
-            <a href="legal.html">Legal</a>
-        </div>
-        <div class="challenges-grid">
-            <div class="challenge-title">Multimedia Content Accessibility</div>
-            <div class="challenge-detail">
-                Ensuring images, videos, and audio content have proper text alternatives and captions is a significant challenge for digital news platforms. Live content, such as breaking news videos, requires real-time captioning solutions.
-                <button class="more-btn" data-modal="modal1">More</button>
+        <header role="banner">
+            <h1>Challenges in EAA Compliance</h1>
+        </header>
+        
+        <nav role="navigation" aria-label="Main navigation">
+            <div class="nav">
+                <a href="index.html">Home</a>
+                <a href="standards.html">Standards</a>
+                <a href="brexit.html">Brexit & UK</a>
+                <a href="timeline.html">Timeline</a>
+                <a href="compliance.html">Compliance</a>
+                <a href="legal.html">Legal</a>
             </div>
+        </nav>
+        
+        <main role="main">
+            <section aria-labelledby="multimedia-heading">
+                <h2 id="multimedia-heading">Multimedia Content Accessibility</h2>
+                <div class="challenge-detail">
+                    Ensuring images, videos, and audio content have proper text alternatives and captions is a significant challenge for digital news platforms. Live content, such as breaking news videos, requires real-time captioning solutions.
+                    <button class="more-btn" data-modal="modal1">More</button>
+                </div>
+            </section>
             
-            <div class="challenge-title">Dynamic Content and Live Updates</div>
-            <div class="challenge-detail">
-                Live blogs, real-time updates, and auto-refreshing content can cause issues for screen readers and assistive technologies. Implementing ARIA live regions correctly is crucial.
-                <button class="more-btn" data-modal="modal2">More</button>
-            </div>
+            <section aria-labelledby="dynamic-content-heading">
+                <h2 id="dynamic-content-heading">Dynamic Content and Live Updates</h2>
+                <div class="challenge-detail">
+                    Live blogs, real-time updates, and auto-refreshing content can cause issues for screen readers and assistive technologies. Implementing ARIA live regions correctly is crucial.
+                    <button class="more-btn" data-modal="modal2">More</button>
+                </div>
+            </section>
             
-            <div class="challenge-title">Complex Navigation and Site Structure</div>
-            <div class="challenge-detail">
-                News sites often have extensive menus and multiple layers of content. Ensuring keyboard accessibility and logical heading structures is essential to compliance.
-                <button class="more-btn" data-modal="modal3">More</button>
-            </div>
+            <section aria-labelledby="navigation-heading">
+                <h2 id="navigation-heading">Complex Navigation and Site Structure</h2>
+                <div class="challenge-detail">
+                    News sites often have extensive menus and multiple layers of content. Ensuring keyboard accessibility and logical heading structures is essential to compliance.
+                    <button class="more-btn" data-modal="modal3">More</button>
+                </div>
+            </section>
             
-            <div class="challenge-title">Third-Party Content and Advertisements</div>
-            <div class="challenge-detail">
-                Many news platforms rely on embedded social media content and advertising networks, which may not always be accessible. Choosing accessible ad providers is necessary.
-                <button class="more-btn" data-modal="modal4">More</button>
-            </div>
+            <section aria-labelledby="third-party-heading">
+                <h2 id="third-party-heading">Third-Party Content and Advertisements</h2>
+                <div class="challenge-detail">
+                    Many news platforms rely on embedded social media content and advertising networks, which may not always be accessible. Choosing accessible ad providers is necessary.
+                    <button class="more-btn" data-modal="modal4">More</button>
+                </div>
+            </section>
             
-            <div class="challenge-title">Legacy Content and Archives</div>
-            <div class="challenge-detail">
-                Older articles and multimedia often lack accessibility features. Retrofitting historical content is time-consuming but required under the EAA by 2030.
-                <button class="more-btn" data-modal="modal5">More</button>
-            </div>
-        </div>
+            <section aria-labelledby="legacy-content-heading">
+                <h2 id="legacy-content-heading">Legacy Content and Archives</h2>
+                <div class="challenge-detail">
+                    Older articles and multimedia often lack accessibility features. Retrofitting historical content is time-consuming but required under the EAA by 2030.
+                    <button class="more-btn" data-modal="modal5">More</button>
+                </div>
+            </section>
+        </main>
     </div>
 
     <!-- Modal Dialogs -->
-    <div id="modal1" class="modal">
+    <div id="modal1" class="modal" role="dialog" aria-labelledby="modal1-title" aria-hidden="true">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Multimedia Content Accessibility</h2>
+            <span class="close" aria-label="Close">&times;</span>
+            <h2 id="modal1-title">Multimedia Content Accessibility</h2>
             <div class="modal-text">
                 <p>News sites often feature a high volume of images, videos, infographics, and audio clips. Ensuring all these media elements have appropriate text alternatives is a significant task. Every photo or chart in an article needs descriptive <strong>alt text</strong>, and all videos (including live-streamed news segments) should have <strong>captions or transcripts</strong> for deaf or hard-of-hearing users.</p>
                 
@@ -68,10 +84,10 @@
         </div>
     </div>
 
-    <div id="modal2" class="modal">
+    <div id="modal2" class="modal" role="dialog" aria-labelledby="modal2-title" aria-hidden="true">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Dynamic Content and Live Updates</h2>
+            <span class="close" aria-label="Close">&times;</span>
+            <h2 id="modal2-title">Dynamic Content and Live Updates</h2>
             <div class="modal-text">
                 <p>Many digital news outlets provide <strong>live blogs, tickers, or auto-updating feeds</strong> (for example, live election results, sports scores, or breaking news updates that push new content periodically). These dynamic updates can confuse assistive technology if not handled properly – a screen reader user might not be notified of new content, or focus might move unpredictably.</p>
                 
@@ -84,10 +100,10 @@
         </div>
     </div>
 
-    <div id="modal3" class="modal">
+    <div id="modal3" class="modal" role="dialog" aria-labelledby="modal3-title" aria-hidden="true">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Complex Navigation and Site Structure</h2>
+            <span class="close" aria-label="Close">&times;</span>
+            <h2 id="modal3-title">Complex Navigation and Site Structure</h2>
             <div class="modal-text">
                 <p>News websites typically have <strong>complex navigation systems</strong> with multiple levels of menus, sections, and categorization. This complexity poses significant accessibility challenges: all navigation elements must be operable via keyboard, properly labeled for screen readers, and logically structured.</p>
                 
@@ -102,10 +118,10 @@
         </div>
     </div>
 
-    <div id="modal4" class="modal">
+    <div id="modal4" class="modal" role="dialog" aria-labelledby="modal4-title" aria-hidden="true">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Third-Party Content and Advertisements</h2>
+            <span class="close" aria-label="Close">&times;</span>
+            <h2 id="modal4-title">Third-Party Content and Advertisements</h2>
             <div class="modal-text">
                 <p>Digital news sites frequently <strong>embed content from third parties</strong> – social media posts, video players from external sources, interactive elements like maps, and advertising networks. This creates a significant accessibility challenge because these elements are often outside the direct control of the news site developers.</p>
                 
@@ -120,10 +136,10 @@
         </div>
     </div>
 
-    <div id="modal5" class="modal">
+    <div id="modal5" class="modal" role="dialog" aria-labelledby="modal5-title" aria-hidden="true">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Legacy Content and Archives</h2>
+            <span class="close" aria-label="Close">&times;</span>
+            <h2 id="modal5-title">Legacy Content and Archives</h2>
             <div class="modal-text">
                 <p>News organizations often maintain extensive <strong>archives of historical content</strong>, sometimes dating back decades. These archives can contain thousands of articles, images, videos, and interactive features that were created before accessibility standards were widely adopted or required.</p>
                 
@@ -157,6 +173,7 @@
                 if (modal) {
                     modal.style.display = 'block';
                     document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                    modal.setAttribute('aria-hidden', 'false'); // Set aria-hidden to false
                 }
             }
 
@@ -164,6 +181,7 @@
             function closeModal(modal) {
                 modal.style.display = 'none';
                 document.body.style.overflow = ''; // Restore scrolling
+                modal.setAttribute('aria-hidden', 'true'); // Set aria-hidden to true
             }
 
             // Add click event listener to each "More" button

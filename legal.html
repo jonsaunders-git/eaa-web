@@ -9,47 +9,65 @@
 </head>
 <body>
     <div class="container">
-        <h1>Legal & Enforcement - EAA 2025</h1>
-        <div class="nav">
-            <a href="index.html">Home</a>
-            <a href="standards.html">Standards</a>
-            <a href="brexit.html">Brexit & UK</a>
-            <a href="timeline.html">Timeline</a>
-            <a href="challenges.html">Challenges</a>
-            <a href="compliance.html">Compliance</a>
-        </div>
+        <header role="banner">
+            <h1>Legal & Enforcement - EAA 2025</h1>
+        </header>
         
-        <div class="summary-box">
-            <p>The European Accessibility Act (EAA) 2025 mandates accessibility compliance for digital services. Non-compliance may result in legal action, fines, or restricted access to EU markets.</p>
-        </div>
+        <nav role="navigation" aria-label="Main navigation">
+            <div class="nav">
+                <a href="index.html">Home</a>
+                <a href="standards.html">Standards</a>
+                <a href="brexit.html">Brexit & UK</a>
+                <a href="timeline.html">Timeline</a>
+                <a href="challenges.html">Challenges</a>
+                <a href="compliance.html">Compliance</a>
+            </div>
+        </nav>
+        
+        <main role="main">
+            <section aria-labelledby="summary-heading">
+                <h2 id="summary-heading" class="visually-hidden">Summary</h2>
+                <div class="summary-box">
+                    <p>The European Accessibility Act (EAA) 2025 mandates accessibility compliance for digital services. Non-compliance may result in legal action, fines, or restricted access to EU markets.</p>
+                </div>
+            </section>
 
-        <div class="callout">
-            <h3>Enforcement & Compliance Checks</h3>
-            <p>National regulatory authorities in each EU member state are responsible for ensuring compliance. Businesses may be subject to audits and accessibility evaluations.</p>
-            <button class="more-btn" data-modal="modal1">More</button>
-        </div>
-        
-        <div class="callout">
-            <h3>Potential Penalties</h3>
-            <p>Failure to comply with the EAA can lead to financial penalties, mandatory remedial actions, or exclusion from the EU market.</p>
-            <button class="more-btn" data-modal="modal2">More</button>
-        </div>
-        
-        <div class="callout">
-            <h3>How to Avoid Legal Risks</h3>
-            <p>To prevent legal consequences, companies should conduct regular accessibility audits, maintain compliance documentation, and proactively address user complaints.</p>
-            <button class="more-btn" data-modal="modal3">More</button>
-        </div>
-        
-        <h2>Further Resources</h2>
-        <p>For more details on EAA enforcement, visit the <a href="https://ec.europa.eu/social/main.jsp?catId=1202" target="_blank">European Commission Accessibility Portal</a>.</p>
+            <section aria-labelledby="enforcement-heading">
+                <h2 id="enforcement-heading">Enforcement & Compliance Checks</h2>
+                <div class="callout">
+                    <p>National regulatory authorities in each EU member state are responsible for ensuring compliance. Businesses may be subject to audits and accessibility evaluations.</p>
+                    <button class="more-btn" data-modal="modal1">More</button>
+                </div>
+            </section>
+            
+            <section aria-labelledby="penalties-heading">
+                <h2 id="penalties-heading">Potential Penalties</h2>
+                <div class="callout">
+                    <p>Failure to comply with the EAA can lead to financial penalties, mandatory remedial actions, or exclusion from the EU market.</p>
+                    <button class="more-btn" data-modal="modal2">More</button>
+                </div>
+            </section>
+            
+            <section aria-labelledby="avoid-risks-heading">
+                <h2 id="avoid-risks-heading">How to Avoid Legal Risks</h2>
+                <div class="callout">
+                    <p>To prevent legal consequences, companies should conduct regular accessibility audits, maintain compliance documentation, and proactively address user complaints.</p>
+                    <button class="more-btn" data-modal="modal3">More</button>
+                </div>
+            </section>
+            
+            <section aria-labelledby="resources-heading">
+                <h2 id="resources-heading">Further Resources</h2>
+                <p>For more details on EAA enforcement, visit the <a href="https://ec.europa.eu/social/main.jsp?catId=1202" target="_blank">European Commission Accessibility Portal</a>.</p>
+            </section>
+        </main>
     </div>
 
     <!-- Modal Dialogs -->
-    <div id="modal1" class="modal">
+    <div id="modal1" class="modal" role="dialog" aria-labelledby="modal1-title" aria-hidden="true">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Enforcement & Compliance Checks</h2>
+            <span class="close" aria-label="Close">&times;</span>
+            <h2 id="modal1-title">Enforcement & Compliance Checks</h2>
             <div class="modal-text">
                 <p>The EAA will be enforced at the national level by designated authorities in each EU Member State. These authorities will conduct <strong>compliance checks and respond to complaints</strong> about inaccessible services.</p>
                 
@@ -77,10 +95,10 @@
         </div>
     </div>
 
-    <div id="modal2" class="modal">
+    <div id="modal2" class="modal" role="dialog" aria-labelledby="modal2-title" aria-hidden="true">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Potential Penalties</h2>
+            <span class="close" aria-label="Close">&times;</span>
+            <h2 id="modal2-title">Potential Penalties</h2>
             <div class="modal-text">
                 <p>The EAA requires that all penalties for non-compliance be <strong>"effective, proportionate and dissuasive"</strong>. While the exact penalties will vary by EU member state, businesses can expect serious consequences including:</p>
                 
@@ -111,10 +129,10 @@
         </div>
     </div>
 
-    <div id="modal3" class="modal">
+    <div id="modal3" class="modal" role="dialog" aria-labelledby="modal3-title" aria-hidden="true">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>How to Avoid Legal Risks</h2>
+            <span class="close" aria-label="Close">&times;</span>
+            <h2 id="modal3-title">How to Avoid Legal Risks</h2>
             <div class="modal-text">
                 <p>To prevent legal consequences and ensure compliance with the EAA, digital news providers should adopt a proactive and comprehensive approach to accessibility. Key steps include:</p>
                 
@@ -145,6 +163,7 @@
                 if (modal) {
                     modal.style.display = 'block';
                     document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                    modal.setAttribute('aria-hidden', 'false'); // Set aria-hidden to false
                 }
             }
 
@@ -152,6 +171,7 @@
             function closeModal(modal) {
                 modal.style.display = 'none';
                 document.body.style.overflow = ''; // Restore scrolling
+                modal.setAttribute('aria-hidden', 'true'); // Set aria-hidden to true
             }
 
             // Add click event listener to each "More" button

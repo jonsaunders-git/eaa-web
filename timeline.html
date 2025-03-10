@@ -44,28 +44,53 @@
 </head>
 <body onload="updateTimeline()">
     <div class="container">
-        <h1>EAA 2025 Compliance Timeline</h1>
-        <div class="nav">
-            <a href="index.html">Home</a>
-            <a href="standards.html">Standards</a>
-            <a href="brexit.html">Brexit & UK</a>
-            <a href="challenges.html">Challenges</a>
-            <a href="compliance.html">Compliance</a>
-            <a href="legal.html">Legal</a>
-        </div>
-        <div class="timeline-container">
-            <h3>Drag to explore the EAA timeline</h3>
-            <label for="timelineSlider">Select Year:</label>
-            <input type="range" min="2023" max="2035" step="1" value="2025" class="timeline-slider" id="timelineSlider" oninput="updateTimeline()">
-            <div class="timeline-labels">
-                <span data-year="2023">2023</span>
-                <span data-year="2025">2025</span>
-                <span data-year="2027">2027</span>
-                <span data-year="2030">2030</span>
-                <span data-year="2035">2035</span>
+        <header role="banner">
+            <h1>EAA 2025 Compliance Timeline</h1>
+        </header>
+        
+        <nav role="navigation" aria-label="Main navigation">
+            <div class="nav">
+                <a href="index.html">Home</a>
+                <a href="standards.html">Standards</a>
+                <a href="brexit.html">Brexit & UK</a>
+                <a href="challenges.html">Challenges</a>
+                <a href="compliance.html">Compliance</a>
+                <a href="legal.html">Legal</a>
             </div>
-            <div class="timeline-box" id="timelineOutput"></div>
-        </div>
+        </nav>
+        
+        <main role="main">
+            <section aria-labelledby="timeline-heading">
+                <h2 id="timeline-heading" class="visually-hidden">EAA Compliance Timeline</h2>
+                <div class="timeline-container">
+                    <h3>Drag to explore the EAA timeline</h3>
+                    <label for="timelineSlider">Select Year:</label>
+                    <input type="range" min="2023" max="2035" step="1" value="2025" class="timeline-slider" id="timelineSlider" oninput="updateTimeline()">
+                    <div class="timeline-labels">
+                        <span data-year="2023">2023</span>
+                        <span data-year="2025">2025</span>
+                        <span data-year="2027">2027</span>
+                        <span data-year="2030">2030</span>
+                        <span data-year="2035">2035</span>
+                    </div>
+                    <div class="timeline-box" id="timelineOutput"></div>
+                </div>
+            </section>
+        </main>
     </div>
+    
+    <!-- Add CSS for visually hidden elements -->
+    <style>
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+    </style>
 </body>
 </html>
