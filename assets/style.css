@@ -382,7 +382,7 @@ ul ul li::before {
 }
 
 .pour-box.perceivable {
-    background-color: #4A90E2; /* a darker shade of blue */
+    background-color: #2a4dad; /* a darker shade of blue for better contrast */
     color: white; /* Ensure the font color is white */
 }
 
@@ -442,7 +442,7 @@ ul ul li::before {
 
 /* Fix conflicting more-btn styles */
 .more-btn {
-    background: #6AA; /* Less prominent color */
+    background: #005f6b; /* Darker shade for better contrast */
     color: white;
     border: none;
     padding: 5px 10px; /* Smaller padding */
