@@ -9,30 +9,61 @@
 </head>
 <body>
     <div class="container">
-        <h1>European Accessibility Act 2025</h1>
-        <div class="nav">
-            <a href="standards.html">Standards</a>
-            <a href="brexit.html">Brexit & UK</a>
-            <a href="timeline.html">Timeline</a>
-            <a href="challenges.html">Challenges</a>
-            <a href="compliance.html">Compliance</a>
-            <a href="legal.html">Legal</a>
-        </div>
-        <div class="summary-box">
-            <p>The European Accessibility Act (EAA) 2025 mandates that digital services, including news websites, meet accessibility requirements based on WCAG 2.1/2.2 AA standards. This ensures inclusivity for people with disabilities across the EU.</p>
-        </div>
-        <h2>Key Points</h2>
-        <ul>
-            <li>Applies to all digital services targeting EU consumers, regardless of company location.</li>
-            <li>Requires compliance with Web Content Accessibility Guidelines (WCAG) Level AA.</li>
-            <li>Includes deadlines: new content by 2025, existing content must comply by 2030.</li>
-            <li>Failure to comply may lead to fines and restricted access to the EU market.</li>
-        </ul>
-        <p>Explore the detailed pages for compliance strategies, exemptions, legal enforcement, and more.</p>
+        <header role="banner">
+            <h1>European Accessibility Act 2025</h1>
+        </header>
         
-        <div class="resource-link">
-            <a href="document.html">View Complete EAA Documentation & Resources</a>
-        </div>
+        <nav role="navigation" aria-label="Main navigation">
+            <div class="nav">
+                <a href="standards.html">Standards</a>
+                <a href="brexit.html">Brexit & UK</a>
+                <a href="timeline.html">Timeline</a>
+                <a href="challenges.html">Challenges</a>
+                <a href="compliance.html">Compliance</a>
+                <a href="legal.html">Legal</a>
+            </div>
+        </nav>
+        
+        <main role="main">
+            <section aria-labelledby="summary-heading">
+                <h2 id="summary-heading" class="visually-hidden">Summary</h2>
+                <div class="summary-box">
+                    <p>The European Accessibility Act (EAA) 2025 mandates that digital services, including news websites, meet accessibility requirements based on WCAG 2.1/2.2 AA standards. This ensures inclusivity for people with disabilities across the EU.</p>
+                </div>
+            </section>
+            
+            <section aria-labelledby="key-points">
+                <h2 id="key-points">Key Points</h2>
+                <ul>
+                    <li>Applies to all digital services targeting EU consumers, regardless of company location.</li>
+                    <li>Requires compliance with Web Content Accessibility Guidelines (WCAG) Level AA.</li>
+                    <li>Includes deadlines: new content by 2025, existing content must comply by 2030.</li>
+                    <li>Failure to comply may lead to fines and restricted access to the EU market.</li>
+                </ul>
+                <p>Explore the detailed pages for compliance strategies, exemptions, legal enforcement, and more.</p>
+            </section>
+            
+            <section aria-labelledby="resources-heading">
+                <h2 id="resources-heading" class="visually-hidden">Resources</h2>
+                <div class="resource-link">
+                    <a href="document.html">View Complete EAA Documentation & Resources</a>
+                </div>
+            </section>
+        </main>
     </div>
+    
+    <!-- Add CSS for visually hidden elements -->
+    <style>
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+    </style>
 </body>
 </html>
